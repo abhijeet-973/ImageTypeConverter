@@ -29,9 +29,13 @@ typeConversion/
 └── requirements.txt
 
 app.py: The main Flask application file.
+
 templates/: Directory containing HTML templates.
+
 static/uploads/: Directory to store uploaded images.
+
 static/converted/: Directory to store converted images.
+
 requirements.txt: File listing all Python dependencies.
 
 **Installing Dependencies**
@@ -47,7 +51,9 @@ pip install -r requirements.txt
 **Running the Application**
 
 1. Activate the Virtual Environment (if you created one):
+   
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-2.Run the Flask App:
+2. Run the Flask App:
+
    python app.py
