@@ -1,4 +1,5 @@
 **Prerequisites**
+
 Before you begin, ensure you have the following installed on your system:
 
 Python 3.6+
@@ -6,15 +7,25 @@ pip (Python package installer)
 Virtual Environment (optional but recommended)
 
 **Project Structure**
+
 Organize your project directory as follows:
+
 typeConversion/
+
 ├── app.py
+
 ├── templates/
+
 │   ├── index.html
+
 │   └── result.html
+
 ├── static/
+
 │   └── uploads/
+
 │   └── converted/
+
 └── requirements.txt
 
 app.py: The main Flask application file.
