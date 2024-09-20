@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Conversion Result</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <style>
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .image-container {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="text-center">Conversion Successful!</h2>
+      <div class="row">
+        <div class="col-md-6 image-container">
+          <h4>Original Image</h4>
+          <img
+            src="{{ url_for('static', filename=original_image.split('static/')[1]) }}"
+            alt="Original Image"
+          />
+        </div>
+        <div class="col-md-6 image-container">
+          <h4>Converted Image</h4>
+          <img
+            src="{{ url_for('static', filename=converted_image.split('static/')[1]) }}"
+            alt="Converted Image"
+          />
+        </div>
+      </div>
+      <div class="text-center">
+        <a
+          href="{{ url_for('download_file', filename=converted_filename) }}"
+          class="btn btn-success"
+          >Download Converted Image</a
+        >
+        <a href="{{ url_for('index') }}" class="btn btn-secondary"
+          >Convert Another Image</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

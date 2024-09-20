@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Image Type Conversion</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="text-center">Image Type Conversion</h2>
+      <form method="POST" enctype="multipart/form-data">
+        {% with messages = get_flashed_messages() %} {% if messages %}
+        <div class="alert alert-warning" role="alert">
+          {% for message in messages %} {{ message }}<br />
+          {% endfor %}
+        </div>
+        {% endif %} {% endwith %}
+        <div class="form-group">
+          <label for="image">Upload Image:</label>
+          <input
+            type="file"
+            class="form-control-file"
+            id="image"
+            name="image"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="format">Select Target Format:</label>
+          <select class="form-control" id="format" name="format" required>
+            <option value="" disabled selected>Select format</option>
+            <option value="png">PNG</option>
+            <option value="jpg">JPG</option>
+            <option value="jpeg">JPEG</option>
+            <option value="gif">GIF</option>
+            <option value="bmp">BMP</option>
+            <option value="tiff">TIFF</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Convert</button>
+      </form>
+    </div>
+  </body>
+</html>
